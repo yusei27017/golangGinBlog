@@ -1,0 +1,49 @@
+{{ define "aboutSite.tmpl" }}
+    {{ template "header.tmpl" }}
+<head>
+    <link href="/static/product.css" rel="stylesheet">
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="product.css" rel="stylesheet">
+</head>
+<body>
+
+<main>
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+        <div class="col-md-5 p-lg-5 mx-auto my-5">
+            <h1 class="display-4 fw-normal">使用python輕量級框架flask搭建</h1>
+            <h1 class="display-5 fw-normal"> server選用gcp的虛擬機器</h1>
+            <p class="lead fw-normal">對於python-django,php-laravel,golang-gin都有使用經驗</p>
+            <a class="btn btn-outline-secondary" href="https://github.com/yusei27017/flaskBlog">點此看blog/code</a>
+        </div>
+    </div>
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+        <div class="col-md-5 p-lg-5 mx-auto my-5">
+            <h2 class="display-3 fw-normal">對於python爬蟲常用套件有selenium,requests,scrapy</h2>
+            <h3 class="display-4 fw-normal">也接觸些golang,node js</h3>
+            <h4 class="display-5 fw-normal">經常維護php-laravel專案</h4>
+            <h5 class="display-6 fw-normal">雖沒接觸過C語言，但對於機器與C語言操作相當有興趣</h5>
+        </div>
+    </div>
+</main>
+
+
+
+</body>
+{{ end }}

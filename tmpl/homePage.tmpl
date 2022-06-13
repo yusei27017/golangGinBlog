@@ -1,0 +1,127 @@
+{{ define "homePage.tmpl" }}
+    {{ template "header.tmpl"}}
+    <head>
+        <link href="/static/product.css" rel="stylesheet">
+        <style>
+            .bd-placeholder-img {
+                font-size: 1.125rem;
+                text-anchor: middle;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                user-select: none;
+            }
+            .div_onclick{
+                cursor:pointer;
+            }
+            @media (min-width: 768px) {
+                .bd-placeholder-img-lg {
+                    font-size: 3.5rem;
+                }
+            }
+        </style>
+
+
+        <!-- Custom styles for this template -->
+        <link href="product.css" rel="stylesheet">
+    </head>
+    <body>
+
+    <main>
+        <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+            <div class="col-md-5 p-lg-5 mx-auto my-5">
+                <h1 class="display-4 fw-normal">Hello my name is</h1>
+                <h1 class="display-5 fw-normal"> Lin-Teng-En</h1>
+                <p class="lead fw-normal">python的忠實信徒 有維護php-Laravel經驗 對於python爬蟲與資安領域很感興趣</p>
+                <a class="btn btn-outline-secondary" href="/index/aboutSite">觀看簡介</a>
+            </div>
+        </div>
+
+        <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+            <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden div_onclick" onclick="location.href='/index/pixivPage';">
+                <div class="my-3 py-3">
+                    <h2 class="display-5">pixiv  圖片爬取專案</h2>
+                    <p class="lead">使用python scrapy框架 加上docker容器pull scrapy-splash渲染js動態加載</p>
+                </div>
+                <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+                    <img src="./../static/pixiv.jpg" class="bg-dark shadow-sm mx-auto" style="width: 100%; height: 300px; border-radius: 21px 21px 0 0;" alt="">
+                </div>
+            </div>
+            <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden div_onclick" onclick="location.href='/index/ps5Page';">
+                <div class="my-3 p-3">
+                    <h2 class="display-5">PlayStation5 自動購買專案</h2>
+                    <p class="lead">簡單的python requests完成簡易的部署、且快速、輕量的搶購</p>
+                </div>
+                <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+                    <img src="/static/order.jpg" class="bg-dark shadow-sm mx-auto" style="width: 100%; height: 300px; border-radius: 21px 21px 0 0;">
+                </div>
+            </div>
+        </div>
+
+        <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+            <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden div_onclick" onclick="location.href='/index/skillPage';">
+                <div class="my-3 p-3">
+                    <h2 class="display-5">常用且實用的基本知識</h2>
+                    <p class="lead">舉凡資料庫的MySql,mongoDB,前端的js html css jquery和機器的指令等...</p>
+                </div>
+                <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+                    <img src="/static/skill.jpg" class="bg-dark shadow-sm mx-auto" style="width: 100%; height: 300px; border-radius: 21px 21px 0 0;">
+                </div>
+            </div>
+            <div class="bg-primary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidde div_onclick" onclick="location.href='/index/aboutJp';">
+                <div class="my-3 py-3">
+                    <h2 class="display-5">其他興趣與技能</h2>
+                    <p class="lead">JLPT N2 2019/09合格,JLPT N1 2020/01合格</p>
+                </div>
+                <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+                    <img src="/static/kotone.jpg" class="bg-dark shadow-sm mx-auto" style="width: 100%; height: 300px; border-radius: 21px 21px 0 0;">
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="container py-5">
+        <div class="row">
+            <div class="col-12 col-md">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
+                <small class="d-block mb-3 text-muted">&copy; 2017–2021</small>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Link</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a id="footer_0" class="link-secondary" href="/index/linkPage"></a></li>
+                    <li><a id="footer_1" class="link-secondary" href="https://github.com/yusei27017"></a></li>
+                    <li><a id="footer_2" class="link-secondary" href="/index/pixivPage"></a></li>
+                    <li><a id="footer_3" class="link-secondary" href="/index/ps5Page"></a></li>
+                    <li><a id="footer_4" class="link-secondary" href="/index/skillPage"></a></li>
+                    <li><a id="footer_5" class="link-secondary" href="/index/aboutJp"></a></li>
+                    <li><a id="footer_6" class="link-secondary" href="/index/aboutMe"></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        $(function(){
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '/apiIndex', true);
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            var data = {"apitype": "getData", "params": {"sort":"footer"}}
+            xhr.send(JSON.stringify(data));
+            xhr.onreadystatechange = function(){
+                if(this.readyState === 4 && this.status === 200){
+                    var res = JSON.parse(xhr.responseText);
+                    if (res !== []){
+                        var Data = res[0]['Data'];
+                        $("#footer_0").text(Data.footer_0);
+                        $("#footer_1").text(Data.footer_1);
+                        $("#footer_2").text(Data.footer_2);
+                        $("#footer_3").text(Data.footer_3);
+                        $("#footer_4").text(Data.footer_4);
+                        $("#footer_5").text(Data.footer_5);
+                        $("#footer_6").text(Data.footer_6);
+                    }
+                }
+            }
+        })
+    </script>
+{{ end }}
