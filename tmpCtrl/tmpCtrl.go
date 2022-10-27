@@ -36,3 +36,7 @@ func LinkPage(pCont *gin.Context) {
 func AboutSite(pCont *gin.Context) {
 	pCont.HTML(http.StatusOK, "aboutSite.tmpl", nil)
 }
+
+func RunTimer(pCont *gin.Context) {
+	pCont.HTML(http.StatusOK, "runTimer.tmpl", nil)
+}

@@ -46,7 +46,6 @@ type LogInfo struct {
 
 func getData(pCont *gin.Context, params map[string]interface{}) {
 
-	fmt.Println(params)
 	var pTmpData = new(LogInfo)
 	var dataSli = make([]LogInfo, 0)
 	operations := []bson.M{

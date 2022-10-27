@@ -1,0 +1,106 @@
+{{ define "runTimer.tmpl" }}
+    {{ template "header.tmpl"}}
+        <style>
+            @font-face {
+                font-family: 'Covered By Your Grace';
+                font-style: normal;
+                font-weight: 400;
+                src: url(https://fonts.gstatic.com/s/coveredbyyourgrace/v15/QGYwz-AZahWOJJI9kykWW9mD6opopoqXSOSEEQgs.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            }
+            #days {
+                font-size: 200px;
+                color: #db4844;
+                margin:20px;
+            }
+            #hours {
+                font-size: 200px;
+                color: #f07c22;
+                margin:20px;
+
+            }
+            #minutes {
+                font-size: 200px;
+                color: #f6da74;
+                margin:20px;
+
+            }
+            #seconds {
+                font-size: 50px;
+                color: #abcd58;
+            }
+
+            div {
+                display: inline-block;
+                line-height: 1;
+                padding: 20px;
+                font-size: 40px;
+            }
+            #timer{
+                position: absolute;
+                top: 10%;
+                left: 30%;
+                background: rgba(128,128,128,0.5);
+            }
+            span {
+                display: block;
+                font-size: 20px;
+                color: white;
+            }
+
+            body {
+                text-align: center;
+                font-family: 'Covered By Your Grace', cursive;
+                color: white;
+                background: #222;
+            }
+            img {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                min-width: 100%;
+                min-height: 100%;
+                width: auto;
+                height: auto;
+                z-index: -100;
+                transform: translateX(-50%) translateY(-50%);
+                background-size: cover;
+                transition: 1s opacity;
+            }
+        </style>
+        <script>
+            function makeTimer() {
+
+                var now = new Date();
+                var day = now.getDay();
+                var hour = now.getHours();
+                var days = 5 - day;
+                var hours = 17 - hour;
+                var min = now.getMinutes();
+                var minutes = 60 - min;
+                var sec = now.getSeconds();
+                var seconds = 60 - sec;
+
+                if (minutes < "10") { minutes = "0" + minutes; }
+                if (seconds < "10") { seconds = "0" + seconds; }
+
+                $("#days").html(days + "<span>Days</span>");
+                $("#hours").html(hours + "<span>Hours</span>");
+                $("#minutes").html(minutes + "<span>Minutes</span>");
+                $("#seconds").html(seconds + "<span>Seconds</span>");
+
+            }
+
+            setInterval(function() { makeTimer(); }, 1000);
+        </script>
+        <bady>
+            <div id="timer">
+                <div id="days"></div>
+                <div id="hours"></div>
+                <div id="minutes"></div>
+                <div id="seconds"></div>
+                <img src="https://lilyx.pro/test/codeNote/987155341.jpg" alt="Snow">
+            </div>
+        </bady>
+
+{{ end }}

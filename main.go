@@ -22,6 +22,7 @@ func main() {
 	indexRouter.GET("/aboutJp", tmpCtrl.AboutJp)
 	indexRouter.GET("/linkPage", tmpCtrl.LinkPage)
 	indexRouter.GET("/aboutSite", tmpCtrl.AboutSite)
+	indexRouter.GET("/runTimer", tmpCtrl.RunTimer)
 
 	mainRoute.POST("/apiIndex", ctrl.ApiIndex)
 
